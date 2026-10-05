@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Православная молодёжь Тирасполя</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f3e8d3;--bg2:#e9d9bb;--ink:#4a3020;--mute:#7a6048;--acc:#6b4226;--gold:#a47a3a;--card:#faf3e4;--line:#d8c49c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;margin:0;line-height:1.15}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.hero{background:var(--bg);color:var(--ink);text-align:center;padding:56px 0 72px;border-bottom:1px solid var(--line)}
+.logo-slot{width:150px;height:150px;margin:0 auto;border:2px dashed var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:13px;line-height:1.3;padding:20px}.logo-slot img{width:100%;height:100%;object-fit:contain}
+.hero h1{color:var(--acc);font-size:clamp(34px,8vw,64px);font-weight:700;margin:18px 0 12px}
+.hero p{max-width:560px;margin:0 auto 28px;color:var(--mute);font-size:18px}
+.btn{display:inline-block;background:var(--acc);color:#faf3e4;font-weight:600;border:0;border-radius:999px;padding:14px 30px;font-size:16px;text-decoration:none;cursor:pointer}
+.eyebrow{letter-spacing:.2em;text-transform:uppercase;font-size:12px;color:var(--gold)}
+section{padding:64px 0}
+h2{font-size:clamp(28px,6vw,40px);color:var(--acc);text-align:center;margin-bottom:10px}
+.sub{text-align:center;color:var(--mute);max-width:560px;margin:0 auto 36px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.card h3{font-size:24px;color:var(--acc);margin-bottom:6px}
+.card p{margin:0;color:var(--mute)}
+.alt{background:var(--bg2)}
+form{max-width:520px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px}
+label{display:block;font-weight:500;font-size:14px;margin:14px 0 6px}
+input[type=text],input[type=tel],input[type=number]{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+input:focus{outline:2px solid var(--gold)}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--mute);margin-top:14px;font-weight:400}
+.chk input{margin-top:4px;flex:none}
+form .btn{width:100%;margin-top:22px;background:var(--acc);color:#fff}
+.err{color:#c0392b;font-size:14px;min-height:20px;margin-top:10px}
+.note{font-size:12px;color:var(--mute);margin-top:12px}
+footer{text-align:center;padding:32px 20px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<div class="logo-slot" id="logo">Здесь будет логотип</div>
+<div class="eyebrow">Тирасполь · Молодёжное сообщество</div>
+<h1>Православная молодёжь Тирасполя</h1>
+<p>Живое сообщество ребят, которые хотят дружить, расти в вере и делать добрые дела вместе.</p>
+<a class="btn" href="#join">Вступить в сообщество</a>
+</div></header>
+
+<section><div class="wrap">
+<h2>О нас</h2>
+<p class="sub">Мы создали это сообщество, чтобы у молодых людей нашего города было место для общения, поддержки и интересных встреч.</p>
+<div class="grid">
+<div class="card"><h3>Дружба</h3><p>Встречи, прогулки и разговоры в доброй, тёплой компании.</p></div>
+<div class="card"><h3>Вера</h3><p>Знакомство с православной традицией, праздниками и историей.</p></div>
+<div class="card"><h3>Добрые дела</h3><p>Помогаем тем, кому нужна помощь, и участвуем в жизни города.</p></div>
+</div></div></section>
+
+<section class="alt" id="join"><div class="wrap">
+<h2>Присоединяйся</h2>
+<p class="sub">Вступить может любой желающий. Заполни анкету — и мы свяжемся с тобой.</p>
+<form id="f" novalidate>
+<label for="ln">Фамилия</label><input id="ln" type="text" autocomplete="family-name">
+<label for="fn">Имя</label><input id="fn" type="text" autocomplete="given-name">
+<label for="age">Возраст</label><input id="age" type="number" min="6" max="99" inputmode="numeric">
+<label for="ph">Номер телефона</label><input id="ph" type="tel" autocomplete="tel" placeholder="+373 ...">
+<label class="chk" id="parent" style="display:none"><input id="pc" type="checkbox"><span>Мне нет 18 лет, и мой родитель или законный представитель разрешил мне вступить и согласен на обработку моих данных.</span></label>
+<label class="chk"><input id="c" type="checkbox"><span>Я даю согласие на обработку моих персональных данных (фамилия, имя, возраст, телефон) организаторами сообщества только для связи со мной по вопросам сообщества. Согласие можно отозвать в любой момент, написав организаторам.</span></label>
+<div class="err" id="e" role="alert"></div>
+<button class="btn" type="submit">Отправить заявку</button>
+<input type="text" id="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+<div class="ok" id="ok" style="display:none;margin-top:16px;color:var(--acc);font-weight:600"></div>
+<p class="note">Заявка уходит организатору в Telegram. На самом сайте данные не хранятся.</p>
+</form>
+</div></section>
+
+<footer>© Православная молодёжь Тирасполя</footer>
+
+<script>
+var WORKER_URL="https://weathered-base-d67e.vasyagarga1331.workers.dev";
+var $=function(i){return document.getElementById(i)};
+$("age").addEventListener("input",function(){var a=parseInt(this.value,10);$("parent").style.display=(a&&a<18)?"flex":"none"});
+$("f").addEventListener("submit",function(ev){
+ev.preventDefault();
+var ln=$("ln").value.trim(),fn=$("fn").value.trim(),age=parseInt($("age").value,10),ph=$("ph").value.trim(),e=$("e");
+if(!ln||!fn||!age||!ph){e.textContent="Заполни все поля.";return}
+if(!/^[+\d][\d\s()\-]{6,}$/.test(ph)){e.textContent="Проверь номер телефона.";return}
+if(age<18&&!$("pc").checked){e.textContent="Нужно разрешение родителя или законного представителя.";return}
+if(!$("c").checked){e.textContent="Нужно согласие на обработку данных.";return}
+e.textContent="";
+var body="Фамилия: "+ln+"\nИмя: "+fn+"\nВозраст: "+age+"\nТелефон: "+ph+"\nСогласие на обработку данных: да"+(age<18?"\nРазрешение родителя: да":"");
+var btn=ev.target.querySelector("button");btn.disabled=true;btn.textContent="Отправляем...";
+fetch(WORKER_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({lastName:ln,firstName:fn,age:age,phone:ph,consent:true,parentConsent:age<18?true:false,website:$("website").value})})
+.then(function(r){return r.json()}).then(function(j){
+if(j.ok){ev.target.reset();$("parent").style.display="none";$("ok").style.display="block";$("ok").textContent="Спасибо! Заявка отправлена, мы скоро свяжемся с тобой."}
+else{e.textContent="Не получилось отправить. Попробуй позже."}
+}).catch(function(){e.textContent="Не получилось отправить. Попробуй позже."})
+.then(function(){btn.disabled=false;btn.textContent="Отправить заявку"});
+});
+</script>
+</body>
+</html>

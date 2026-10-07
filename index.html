@@ -3,141 +3,126 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Православная молодёжь Тирасполя</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+<title>Православная Молодёжь Тирасполя</title>
+<meta name="description" content="Тёплая компания друзей в Тирасполе. Воскресные службы, прогулки по городу, общение. Рады каждому.">
 <style>
-:root{--bg:#f3e8d3;--surface:#faf3e4;--ink:#4a3020;--mute:#6f5640;--acc:#6b4226;--err:#9b2c1f;--line:rgba(74,48,32,.12);--shadow:0 1px 3px rgba(74,48,32,.06);
---s1:4px;--s2:8px;--s3:12px;--s4:16px;--s6:24px;--s8:32px;--s12:48px;--s16:64px}
+:root{--bg:#F6EFE4;--bg2:#EDE0CC;--card:#FFFAF2;--ink:#3E2A1C;--ink2:#7A5C43;--line:#D9C7AC;--brown:#6B4429}
 *{box-sizing:border-box}
-html{width:100%}
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.55 Inter,system-ui,sans-serif}
-:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-.skip{position:absolute;left:var(--s4);top:-64px;background:var(--surface);color:var(--ink);padding:var(--s3) var(--s4);border:1px solid var(--line);border-radius:8px;z-index:10}
-.skip:focus{top:var(--s4)}
-h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;color:var(--acc);margin:0}
-h1{font-size:clamp(2rem,7vw,3rem);line-height:1.15}
-h2{font-size:2rem;line-height:1.2;text-align:center}
-h3{font-size:1.5rem;line-height:1.2;margin-bottom:var(--s2)}
-.wrap{max-width:960px;margin:0 auto;padding:0 var(--s6)}
-.lead{max-width:65ch;margin:var(--s4) auto 0;color:var(--mute);text-align:center}
-.eyebrow{font-size:.75rem;line-height:1.4;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:var(--s6) 0 var(--s2)}
-.hero{text-align:center;padding:var(--s12) 0 var(--s16);border-bottom:1px solid var(--line)}
-.logo-slot{width:160px;height:160px;margin:0 auto;border:1px dashed var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;padding:var(--s6);color:var(--mute);font-size:.875rem;line-height:1.4}
-section{padding:var(--s16) 0;border-bottom:1px solid var(--line)}
-.grid{display:grid;gap:var(--s4);grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:var(--s8)}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:var(--s6);box-shadow:var(--shadow)}
-.card p{margin:0;color:var(--mute);font-size:.875rem;line-height:1.55}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 var(--s8);background:var(--acc);color:var(--surface);border:0;border-radius:999px;font:500 1rem/1 Inter,system-ui,sans-serif;text-decoration:none;cursor:pointer;margin-top:var(--s6)}
-form{max-width:520px;margin:var(--s8) auto 0;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:var(--s8);box-shadow:var(--shadow)}
-.field{margin-bottom:var(--s4)}
-label.l{display:block;font-weight:500;font-size:.875rem;margin-bottom:var(--s2)}
-input[type=text],input[type=tel],input[type=number]{width:100%;min-height:48px;padding:0 var(--s4);border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
-input::placeholder{color:var(--mute);opacity:.8}
-input[aria-invalid=true]{border-color:var(--err)}
-.err{min-height:0;margin:var(--s1) 0 0;font-size:.875rem;color:var(--err)}
-.chk{display:flex;gap:var(--s3);align-items:flex-start;min-height:44px;font-size:.875rem;line-height:1.5;color:var(--mute);cursor:pointer}
-.chk input{flex:none;width:20px;height:20px;margin:2px 0 0}
-form .btn{width:100%;margin-top:var(--s6)}
-.note{font-size:.75rem;line-height:1.4;color:var(--mute);margin:var(--s3) 0 0}
-.msg{margin:var(--s4) 0 0;font-weight:500}
-footer{text-align:center;padding:var(--s8) var(--s6);color:var(--mute);font-size:.875rem}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height:1.2;margin:0}
+h1{font-size:clamp(30px,7vw,52px)}
+h2{font-size:clamp(24px,5vw,32px);margin-bottom:16px}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:rgba(246,239,228,.94);border-bottom:1px solid var(--line)}
+nav{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;padding:12px 20px;font-size:14px}
+nav a{text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--ink)}
+.hero{text-align:center;padding:72px 0 64px}
+.hero p{color:var(--ink2);margin:14px auto 28px;max-width:30em;font-size:18px}
+.btn{display:inline-block;background:var(--brown);color:var(--bg);border:0;border-radius:8px;padding:13px 28px;font:500 16px/1 inherit;text-decoration:none;cursor:pointer}
+.btn:hover{background:#573620}
+:focus-visible{outline:2px solid var(--brown);outline-offset:2px}
+section{padding:56px 0}
+.alt{background:var(--bg2)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{background:var(--bg);border-radius:12px;padding:18px}
+.card b{display:block;font-family:Georgia,serif;font-weight:500;font-size:18px;margin-bottom:4px}
+.card span{color:var(--ink2);font-size:14px}
+details{background:var(--bg);border-radius:8px;margin-bottom:8px;padding:14px 16px}
+summary{cursor:pointer;font-weight:500}
+details p{color:var(--ink2);margin-top:8px}
+form{display:flex;flex-direction:column;gap:10px;max-width:420px}
+input[type=text],input[type=tel],input[type=number]{width:100%;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px;font:inherit;color:var(--ink)}
+label.ck{display:flex;gap:8px;font-size:13px;color:var(--ink2);align-items:flex-start}
+.hp{position:absolute;left:-9999px}
+#msg{font-size:14px;min-height:1.4em}
+.sub{color:var(--ink2);margin-bottom:16px}
+footer{padding:28px 0;text-align:center;color:var(--ink2);font-size:13px}
+.rv{opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
+@media (max-width:420px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<a class="skip" href="#join">Перейти к анкете</a>
-<header class="hero"><div class="wrap">
-<div class="logo-slot" id="logo">Здесь будет логотип</div>
-<p class="eyebrow">Тирасполь · Молодёжное сообщество</p>
-<h1>Православная молодёжь Тирасполя</h1>
-<p class="lead">Живое сообщество ребят, которые хотят дружить, расти в вере и делать добрые дела вместе.</p>
-<a class="btn" href="#join">Вступить в сообщество</a>
-</div></header>
+<header><nav>
+<a href="#about">О нас</a><a href="#inside">Что внутри</a><a href="#faq">Вопросы</a><a href="#join">Вступить</a>
+</nav></header>
 
 <main>
-<section id="about"><div class="wrap">
+<div class="wrap hero">
+<h1>Православная Молодёжь Тирасполя</h1>
+<p>Тёплая компания друзей. Рады каждому.</p>
+<a class="btn" href="#join">Вступить</a>
+</div>
+
+<section id="inside" class="alt"><div class="wrap rv">
+<h2>Что внутри</h2>
+<div class="grid">
+<div class="card"><b>Друзья</b><span>Общение с теми, кто близок по духу</span></div>
+<div class="card"><b>Службы</b><span>Каждое воскресенье вместе</span></div>
+<div class="card"><b>Прогулки</b><span>Открываем Тирасполь вместе</span></div>
+<div class="card"><b>Доброта</b><span>Уют и поддержка в чате</span></div>
+</div></div></section>
+
+<section id="about"><div class="wrap rv">
 <h2>О нас</h2>
-<p class="lead">Мы создали это сообщество, чтобы у молодых людей нашего города было место для общения, поддержки и интересных встреч.</p>
-<div class="grid">
-<div class="card"><h3>Дружба</h3><p>Встречи, прогулки и разговоры в доброй, тёплой компании.</p></div>
-<div class="card"><h3>Вера</h3><p>Знакомство с православной традицией, праздниками и историей.</p></div>
-<div class="card"><h3>Добрые дела</h3><p>Помогаем тем, кому нужна помощь, и участвуем в жизни города.</p></div>
-</div></div></section>
+<p>Мы — Православная Молодёжь Тирасполя. Наше сообщество только открывается, и мы рады каждому, кто хочет найти друзей и единомышленников. Мы вместе ходим на воскресные службы, гуляем по родному городу и общаемся в тёплой, доброй атмосфере. Присоединяйтесь: здесь вам будут рады!</p>
+</div></section>
 
-<section id="plans"><div class="wrap">
-<h2>Чем мы будем заниматься</h2>
-<p class="lead">Наша идея: собрать православных пацанов и девчонок, общаться, гулять и делать всё это вместе. Встречаемся раз в неделю, в храме и онлайн.</p>
-<div class="grid">
-<div class="card"><h3>Общение</h3><p>Общий чат, где мы говорим на православные темы и просто дружим.</p></div>
-<div class="card"><h3>Прогулки и походы</h3><p>Гуляем вместе по городу и за его пределами.</p></div>
-<div class="card"><h3>Храмы и монастыри</h3><p>Ходим по храмам и монастырям, знакомимся с их историей.</p></div>
-<div class="card"><h3>Молитва</h3><p>Молимся друг за друга и ходим вместе на службы.</p></div>
-<div class="card"><h3>Праздники</h3><p>Вместе отмечаем Пасху и Рождество.</p></div>
-<div class="card"><h3>Гости и таланты</h3><p>Приглашаем священника и интересных гостей. Музыка, хор, фото, видео и рисование: всем найдётся дело.</p></div>
-</div></div></section>
+<section id="faq" class="alt"><div class="wrap rv">
+<h2>Вопросы и ответы</h2>
+<details><summary>Сколько стоит участие?</summary><p>Нисколько, просто дружелюбная компания.</p></details>
+<details><summary>Будут ли мне рады?</summary><p>Конечно, мы рады всем братьям и сёстрам.</p></details>
+</div></section>
 
-<section id="join"><div class="wrap">
-<h2>Присоединяйся</h2>
-<p class="lead">Вступить может любой желающий. Заполни анкету, и мы свяжемся с тобой.</p>
+<section id="join"><div class="wrap rv">
+<h2>Как вступить</h2>
+<p class="sub">Оставьте заявку, и мы с вами свяжемся. Общение сообщества идёт в Telegram.</p>
 <form id="f" novalidate>
-<div class="field"><label class="l" for="ln">Фамилия</label><input id="ln" type="text" autocomplete="family-name" required aria-describedby="ln-e"><p class="err" id="ln-e"></p></div>
-<div class="field"><label class="l" for="fn">Имя</label><input id="fn" type="text" autocomplete="given-name" required aria-describedby="fn-e"><p class="err" id="fn-e"></p></div>
-<div class="field"><label class="l" for="age">Возраст</label><input id="age" type="number" min="6" max="99" inputmode="numeric" required aria-describedby="age-e"><p class="err" id="age-e"></p></div>
-<div class="field"><label class="l" for="ph">Номер телефона</label><input id="ph" type="tel" autocomplete="tel" placeholder="+373 777 12345" required aria-describedby="ph-e"><p class="err" id="ph-e"></p></div>
-<div class="field" id="parent" hidden><label class="chk"><input id="pc" type="checkbox" aria-describedby="pc-e"><span>Мне нет 18 лет, и мой родитель или законный представитель разрешил мне вступить и согласен на обработку моих данных.</span></label><p class="err" id="pc-e"></p></div>
-<div class="field"><label class="chk"><input id="c" type="checkbox" aria-describedby="c-e"><span>Я даю согласие на обработку моих персональных данных (фамилия, имя, возраст, телефон) организаторами сообщества только для связи со мной по вопросам сообщества. Согласие можно отозвать в любой момент, написав организаторам.</span></label><p class="err" id="c-e"></p></div>
-<input type="text" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+<input type="text" id="name" name="name" placeholder="Фамилия и имя" autocomplete="name" required>
+<input type="tel" id="phone" name="phone" placeholder="Телефон" autocomplete="tel" required>
+<input type="number" id="age" name="age" placeholder="Возраст" min="5" max="99" inputmode="numeric" required>
+<input class="hp" type="text" id="site" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
+<label class="ck"><input type="checkbox" id="agree" required> Согласен(на) на обработку данных. Если вам нет 18 лет, заявку отправляйте с согласия родителей.</label>
 <button class="btn" type="submit" id="send">Отправить заявку</button>
-<p class="err msg" id="fe" role="alert"></p>
-<p class="msg" id="ok" role="status" style="color:var(--acc)"></p>
-<p class="note">Заявка уходит организатору в Telegram. На самом сайте данные не хранятся.</p>
+<div id="msg" role="status"></div>
 </form>
 </div></section>
 </main>
 
-<footer>© Православная молодёжь Тирасполя</footer>
+<footer>Православная Молодёжь Тирасполя</footer>
 
 <script>
-var WORKER_URL="https://weathered-base-d67e.vasyagarga1331.workers.dev";
-var $=function(i){return document.getElementById(i)};
-var age=function(){return parseInt($("age").value,10)};
-var rules={
-ln:function(){return $("ln").value.trim()?"":"Введи фамилию."},
-fn:function(){return $("fn").value.trim()?"":"Введи имя."},
-age:function(){var a=age();return a>=6&&a<=99?"":"Введи возраст числом, например 14."},
-ph:function(){return /^[+\d][\d\s()\-]{6,}$/.test($("ph").value.trim())?"":"Введи номер в таком виде: +373 777 12345."},
-pc:function(){return age()<18&&!$("pc").checked?"Попроси родителя разрешить вступление и поставь галочку.":""},
-c:function(){return $("c").checked?"":"Поставь галочку, чтобы мы могли принять заявку."}
-};
-var order=["ln","fn","age","ph","pc","c"];
-function show(id,m){$(id+"-e").textContent=m;$(id).setAttribute("aria-invalid",m?"true":"false")}
-order.forEach(function(id){
-var el=$(id);
-el.addEventListener("blur",function(){if(id==="pc"&&$("parent").hidden)return;show(id,rules[id]())});
-el.addEventListener("focus",function(){show(id,"")});
+var WORKER_URL = "https://ВАШ-WORKER.ВАШ-АККАУНТ.workers.dev"; // адрес Cloudflare Worker
+
+var f = document.getElementById("f"), msg = document.getElementById("msg"), btn = document.getElementById("send");
+f.addEventListener("submit", function (e) {
+  e.preventDefault();
+  var d = {
+    name: f.name.value.trim(), phone: f.phone.value.trim(), age: f.age.value.trim(),
+    site: f.site.value
+  };
+  if (!d.name || !d.phone || !d.age) { msg.textContent = "Заполните все поля."; return; }
+  if (!/^[+\d\s()\-]{6,20}$/.test(d.phone)) { msg.textContent = "Проверьте номер телефона."; return; }
+  if (!document.getElementById("agree").checked) { msg.textContent = "Поставьте галочку согласия."; return; }
+  btn.disabled = true; msg.textContent = "Отправляем…";
+  fetch(WORKER_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(d) })
+    .then(function (r) { if (!r.ok) throw 0; f.reset(); msg.textContent = "Заявка отправлена. Мы свяжемся с вами."; })
+    .catch(function () { msg.textContent = "Не удалось отправить заявку. Попробуйте ещё раз позже."; })
+    .then(function () { btn.disabled = false; });
 });
-$("age").addEventListener("input",function(){var a=age();$("parent").hidden=!(a&&a<18)});
-var sending=false;
-$("f").addEventListener("submit",function(ev){
-ev.preventDefault();if(sending)return;
-$("fe").textContent="";$("ok").textContent="";
-var first=null;
-order.forEach(function(id){
-var m=(id==="pc"&&$("parent").hidden)?"":rules[id]();
-show(id,m);if(m&&!first)first=id;
-});
-if(first){$(first).focus();return}
-sending=true;var b=$("send");b.setAttribute("aria-busy","true");b.textContent="Отправляем…";
-var a=age();
-fetch(WORKER_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({lastName:$("ln").value.trim(),firstName:$("fn").value.trim(),age:a,phone:$("ph").value.trim(),consent:true,parentConsent:a<18,website:$("website").value})})
-.then(function(r){return r.json()})
-.then(function(j){
-if(j.ok){$("f").reset();$("parent").hidden=true;order.forEach(function(id){show(id,"")});$("ok").textContent="Спасибо! Заявка отправлена, мы скоро свяжемся с тобой."}
-else{$("fe").textContent="Не получилось отправить заявку. Проверь данные и попробуй ещё раз."}
-})
-.catch(function(){$("fe").textContent="Не получилось отправить заявку. Проверь интернет и попробуй ещё раз. Данные остались в форме."})
-.then(function(){sending=false;b.removeAttribute("aria-busy");b.textContent="Отправить заявку"});
-});
+
+var els = document.querySelectorAll(".rv");
+if ("IntersectionObserver" in window) {
+  var io = new IntersectionObserver(function (a) {
+    a.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("on"); io.unobserve(x.target); } });
+  }, { threshold: .12 });
+  els.forEach(function (el) { io.observe(el); });
+} else { els.forEach(function (el) { el.classList.add("on"); }); }
 </script>
 </body>
 </html>

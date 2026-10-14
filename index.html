@@ -2,127 +2,133 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F3E9DA">
+<meta name="color-scheme" content="light">
 <title>Православная Молодёжь Тирасполя</title>
 <meta name="description" content="Тёплая компания друзей в Тирасполе. Воскресные службы, прогулки по городу, общение. Рады каждому.">
 <style>
-:root{--bg:#F6EFE4;--bg2:#EDE0CC;--card:#FFFAF2;--ink:#3E2A1C;--ink2:#7A5C43;--line:#D9C7AC;--brown:#6B4429}
+:root{color-scheme:light;--bg:#F3E9DA;--card:#FBF5EA;--ink:#36231A;--ink2:#6F5340;--line:#D2BE9F;--brown:#5E3B24;--brown2:#4A2D1A;--side:24px;--gap:64px}
+@media (min-width:700px){:root{--gap:96px}}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:60px}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;line-height:1.2;margin:0}
-h1{font-size:clamp(30px,7vw,52px)}
-h2{font-size:clamp(24px,5vw,32px);margin-bottom:16px}
-p{margin:0}
-a{color:inherit}
-.wrap{max-width:720px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;z-index:5;background:rgba(246,239,228,.94);border-bottom:1px solid var(--line)}
-nav{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;padding:12px 20px;font-size:14px}
-nav a{text-decoration:none;color:var(--ink2)}
-nav a:hover{color:var(--ink)}
-.hero{text-align:center;padding:72px 0 64px}
-.hero p{color:var(--ink2);margin:14px auto 28px;max-width:30em;font-size:18px}
-.btn{display:inline-block;background:var(--brown);color:var(--bg);border:0;border-radius:8px;padding:13px 28px;font:500 16px/1 inherit;text-decoration:none;cursor:pointer}
-.btn:hover{background:#573620}
-:focus-visible{outline:2px solid var(--brown);outline-offset:2px}
-section{padding:56px 0}
-.alt{background:var(--bg2)}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.card{background:var(--bg);border-radius:12px;padding:18px}
-.card b{display:block;font-family:Georgia,serif;font-weight:500;font-size:18px;margin-bottom:4px}
-.card span{color:var(--ink2);font-size:14px}
-details{background:var(--bg);border-radius:8px;margin-bottom:8px;padding:14px 16px}
-summary{cursor:pointer;font-weight:500}
-details p{color:var(--ink2);margin-top:8px}
-form{display:flex;flex-direction:column;gap:10px;max-width:420px}
-input[type=text],input[type=tel],input[type=number]{width:100%;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px;font:inherit;color:var(--ink)}
-label.ck{display:flex;gap:8px;font-size:13px;color:var(--ink2);align-items:flex-start}
-.hp{position:absolute;left:-9999px}
-#msg{font-size:14px;min-height:1.4em}
-.sub{color:var(--ink2);margin-bottom:16px}
-footer{padding:28px 0;text-align:center;color:var(--ink2);font-size:13px}
-.rv{opacity:0;transform:translateY(12px);transition:opacity .5s,transform .5s}
-.rv.on{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}}
-@media (max-width:420px){.grid{grid-template-columns:1fr}}
+html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;touch-action:manipulation}
+h1,h2,.serif{font-family:"Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;font-weight:500;margin:0;text-wrap:balance}
+h1{font-size:clamp(36px,9vw,60px);line-height:1.1}
+h2{font-size:clamp(28px,6vw,32px);line-height:1.2;margin-bottom:24px}
+p{margin:0;text-wrap:pretty}
+.wrap{max-width:688px;margin:0 auto;padding:0 var(--side)}
+.skip{position:absolute;left:12px;top:-60px;background:var(--brown);color:var(--bg);padding:10px 14px;border-radius:8px;z-index:10}
+.skip:focus{top:10px}
+:focus-visible{outline:3px solid var(--brown);outline-offset:3px;border-radius:4px}
+[id]{scroll-margin-top:24px}
+
+.hero{padding-top:calc(80px + env(safe-area-inset-top));padding-bottom:var(--gap)}
+.hero p{font-size:19px;color:var(--ink2);margin:16px 0 32px}
+.btn{display:inline-block;background:var(--brown);color:var(--bg);border:0;border-radius:10px;padding:16px 32px;min-height:48px;font:500 17px/1 inherit;text-decoration:none;cursor:pointer;transition:background-color .2s}
+.btn:hover{background:var(--brown2)}
+.btn:active{background:#3A2213}
+.btn[disabled]{opacity:.65;cursor:progress}
+.in{animation:rise .7s ease both}
+.in:nth-child(2){animation-delay:.1s}.in:nth-child(3){animation-delay:.2s}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+section{padding:var(--gap) 0;border-top:1px solid var(--line)}
+section:last-of-type{padding-bottom:calc(var(--gap) + env(safe-area-inset-bottom))}
+.rows{margin:0;padding:0;list-style:none}
+.rows li{display:grid;grid-template-columns:1fr;gap:4px;padding:20px 0;border-bottom:1px solid var(--line)}
+.rows li:first-child{padding-top:0}
+.rows li:last-child{border-bottom:0;padding-bottom:0}
+.rows b{font:500 24px/1.2 "Palatino Linotype",Palatino,Georgia,serif}
+.rows span{color:var(--ink2)}
+@media (min-width:600px){.rows li{grid-template-columns:200px 1fr;align-items:baseline;gap:24px}}
+
+form{display:flex;flex-direction:column;gap:16px;max-width:440px}
+.fld label{display:block;font-weight:500;margin-bottom:6px;font-size:15px}
+input[type=text],input[type=tel],input[type=number]{width:100%;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:13px 14px;font:inherit;color:var(--ink)}
+input[aria-invalid=true]{border-color:#9B2C1F}
+.err{color:#9B2C1F;font-size:14px;margin-top:4px}
+label.ck{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink2);cursor:pointer;padding:4px 0}
+label.ck input{width:22px;height:22px;margin:0;flex:none;accent-color:var(--brown)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#msg{font-size:15px;min-height:1.5em}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.in{animation:none}.btn{transition:none}}
 </style>
 </head>
 <body>
-<header><nav>
-<a href="#about">О нас</a><a href="#inside">Что внутри</a><a href="#faq">Вопросы</a><a href="#join">Вступить</a>
-</nav></header>
+<a class="skip" href="#main">К содержимому</a>
 
-<main>
+<main id="main">
 <div class="wrap hero">
-<h1>Православная Молодёжь Тирасполя</h1>
-<p>Тёплая компания друзей. Рады каждому.</p>
-<a class="btn" href="#join">Вступить</a>
+<h1 class="in">Православная Молодёжь Тирасполя</h1>
+<p class="in">Тёплая компания друзей. Рады каждому.</p>
+<a class="btn in" href="#join">Вступить</a>
 </div>
 
-<section id="inside" class="alt"><div class="wrap rv">
+<section id="inside"><div class="wrap">
 <h2>Что внутри</h2>
-<div class="grid">
-<div class="card"><b>Друзья</b><span>Общение с теми, кто близок по духу</span></div>
-<div class="card"><b>Службы</b><span>Каждое воскресенье вместе</span></div>
-<div class="card"><b>Прогулки</b><span>Открываем Тирасполь вместе</span></div>
-<div class="card"><b>Доброта</b><span>Уют и поддержка в чате</span></div>
-</div></div></section>
+<ul class="rows">
+<li><b>Друзья</b><span>Общение с теми, кто близок по духу.</span></li>
+<li><b>Службы</b><span>Каждое воскресенье ходим вместе.</span></li>
+<li><b>Прогулки</b><span>Открываем Тирасполь вместе.</span></li>
+<li><b>Доброта</b><span>Уют и поддержка в нашем чате.</span></li>
+</ul></div></section>
 
-<section id="about"><div class="wrap rv">
+<section id="about"><div class="wrap">
 <h2>О нас</h2>
 <p>Мы — Православная Молодёжь Тирасполя. Наше сообщество только открывается, и мы рады каждому, кто хочет найти друзей и единомышленников. Мы вместе ходим на воскресные службы, гуляем по родному городу и общаемся в тёплой, доброй атмосфере. Присоединяйтесь: здесь вам будут рады!</p>
 </div></section>
 
-<section id="faq" class="alt"><div class="wrap rv">
-<h2>Вопросы и ответы</h2>
-<details><summary>Сколько стоит участие?</summary><p>Нисколько, просто дружелюбная компания.</p></details>
-<details><summary>Будут ли мне рады?</summary><p>Конечно, мы рады всем братьям и сёстрам.</p></details>
-</div></section>
-
-<section id="join"><div class="wrap rv">
+<section id="join"><div class="wrap">
 <h2>Как вступить</h2>
-<p class="sub">Оставьте заявку, и мы с вами свяжемся. Общение сообщества идёт в Telegram.</p>
 <form id="f" novalidate>
-<input type="text" id="name" name="name" placeholder="Фамилия и имя" autocomplete="name" required>
-<input type="tel" id="phone" name="phone" placeholder="Телефон" autocomplete="tel" required>
-<input type="number" id="age" name="age" placeholder="Возраст" min="5" max="99" inputmode="numeric" required>
-<input class="hp" type="text" id="site" name="site" tabindex="-1" autocomplete="off" aria-hidden="true">
-<label class="ck"><input type="checkbox" id="agree" required> Согласен(на) на обработку данных. Если вам нет 18 лет, заявку отправляйте с согласия родителей.</label>
+<div class="fld"><label for="name">Фамилия и имя</label>
+<input type="text" id="name" name="name" placeholder="Иванов Иван…" autocomplete="name" aria-describedby="e-name" required><div class="err" id="e-name"></div></div>
+<div class="fld"><label for="phone">Телефон</label>
+<input type="tel" id="phone" name="phone" placeholder="+373 777 12 345…" autocomplete="tel" inputmode="tel" spellcheck="false" aria-describedby="e-phone" required><div class="err" id="e-phone"></div></div>
+<div class="fld"><label for="age">Возраст</label>
+<input type="number" id="age" name="age" placeholder="14…" min="5" max="99" inputmode="numeric" autocomplete="off" aria-describedby="e-age" required><div class="err" id="e-age"></div></div>
+<div class="hp" aria-hidden="true"><label for="site">Не заполняйте это поле</label><input type="text" id="site" name="site" tabindex="-1" autocomplete="off"></div>
+<div><label class="ck"><input type="checkbox" id="agree" aria-describedby="e-agree"><span>Согласен(на) на обработку данных. Если вам нет 18 лет, отправляйте заявку с согласия родителей.</span></label><div class="err" id="e-agree"></div></div>
 <button class="btn" type="submit" id="send">Отправить заявку</button>
-<div id="msg" role="status"></div>
+<div id="msg" role="status" aria-live="polite"></div>
 </form>
 </div></section>
 </main>
 
-<footer>Православная Молодёжь Тирасполя</footer>
-
 <script>
-var WORKER_URL = "https://lingering-base-f179.vasyagarga1331.workers.dev/"; // адрес Cloudflare Worker
+var WORKER_URL = "https://ВАШ-WORKER.ВАШ-АККАУНТ.workers.dev"; // адрес Cloudflare Worker
 
 var f = document.getElementById("f"), msg = document.getElementById("msg"), btn = document.getElementById("send");
+
+function setErr(id, text) {
+  var el = document.getElementById(id), key = id.slice(2), input = document.getElementById(key);
+  el.textContent = text || "";
+  if (input && input.type !== "checkbox") input.setAttribute("aria-invalid", text ? "true" : "false");
+  return text ? input : null;
+}
+
 f.addEventListener("submit", function (e) {
   e.preventDefault();
-  var d = {
-    name: f.name.value.trim(), phone: f.phone.value.trim(), age: f.age.value.trim(),
-    site: f.site.value
-  };
-  if (!d.name || !d.phone || !d.age) { msg.textContent = "Заполните все поля."; return; }
-  if (!/^[+\d\s()\-]{6,20}$/.test(d.phone)) { msg.textContent = "Проверьте номер телефона."; return; }
-  if (!document.getElementById("agree").checked) { msg.textContent = "Поставьте галочку согласия."; return; }
+  msg.textContent = "";
+  var d = { name: f.name.value.trim(), phone: f.phone.value.trim(), age: f.age.value.trim(), site: f.site.value };
+  var age = Number(d.age);
+  var bad = [
+    setErr("e-name", d.name.length < 3 ? "Введите фамилию и имя." : ""),
+    setErr("e-phone", /^[+\d\s()\-]{6,20}$/.test(d.phone) ? "" : "Введите номер, например +373 777 12 345."),
+    setErr("e-age", age >= 5 && age <= 99 ? "" : "Введите возраст числом."),
+    setErr("e-agree", document.getElementById("agree").checked ? "" : "Поставьте галочку согласия.")
+  ].filter(Boolean);
+  if (document.getElementById("e-agree").textContent) bad.push(document.getElementById("agree"));
+  if (bad.length) { bad[0].focus(); return; }
+
   btn.disabled = true; msg.textContent = "Отправляем…";
   fetch(WORKER_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(d) })
     .then(function (r) { if (!r.ok) throw 0; f.reset(); msg.textContent = "Заявка отправлена. Мы свяжемся с вами."; })
-    .catch(function () { msg.textContent = "Не удалось отправить заявку. Попробуйте ещё раз позже."; })
+    .catch(function () { msg.textContent = "Не удалось отправить заявку. Проверьте интернет и нажмите кнопку ещё раз."; })
     .then(function () { btn.disabled = false; });
 });
-
-var els = document.querySelectorAll(".rv");
-if ("IntersectionObserver" in window) {
-  var io = new IntersectionObserver(function (a) {
-    a.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add("on"); io.unobserve(x.target); } });
-  }, { threshold: .12 });
-  els.forEach(function (el) { io.observe(el); });
-} else { els.forEach(function (el) { el.classList.add("on"); }); }
 </script>
 </body>
 </html>
